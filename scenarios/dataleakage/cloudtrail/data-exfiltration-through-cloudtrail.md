@@ -25,7 +25,8 @@
 | Data Volume Leaked       | Low, medium                                                          |
 | Remediation Complexity   | High                                                                 |
 
-![[/img/t1537.png]]
+![MitreAtt&ckTechnique](/img/t1537.png)
+
 ## Prerequisites
 
 - The attacker has control over an attacker account.

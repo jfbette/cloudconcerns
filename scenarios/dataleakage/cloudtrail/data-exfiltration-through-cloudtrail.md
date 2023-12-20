@@ -25,7 +25,7 @@
 | Data Volume Leaked       | Low, medium                                                          |
 | Remediation Complexity   | High                                                                 |
 
-![[t1537.png]]
+![[/img/t1537.png]]
 ## Prerequisites
 
 - The attacker has control over an attacker account.

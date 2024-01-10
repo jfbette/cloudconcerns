@@ -36,7 +36,7 @@
 
 ### Scenario Diagram
 
-![CloudConcerns Leakage CloudTrail Diagram](cloudconcerns-leakage-cloudtrail.png)
+![CloudConcerns leakage CloudTrail diagram](cloudconcerns-leakage-cloudtrail.png)
 
 ### Scenario Script
 
@@ -50,7 +50,7 @@ Whether the request is authorized or not, it will produce a CloudTrail log. In t
 
 On the attacker's account, the set of CloudTrail logs can be parsed using, for example, CloudWatch log events + Lambda to reassemble all userAgent fields and reconstruct the files.
 
-This scenario demonstrates data exfiltration using a side-channel to convey data, utilizing metadata associated with the request rather than the request itself. No log is produce on the leaking account is no Internet proxy is present. The exfiltration can be very sthealthy
+This scenario demonstrates data exfi     ltration using a side-channel to convey data, utilizing metadata associated with the request rather than the request itself. No log is produce on the leaking account is no Internet proxy is present. The exfiltration can be very sthealthy
 
 ### A Discussion on AWS Identities
 

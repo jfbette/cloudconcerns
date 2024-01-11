@@ -26,9 +26,10 @@
 | Name of the technique    | Indirect Data Exfiltration through CloudTrail on Service Request     |
 | MITRE ATT&CK technique   | [T1537](https://attack.mitre.org/techniques/T1537/)                  |
 | Impact type              | Data Leakage                                                         |
-| Technical Complexity     | Medium, High                                                         |
-| Data Volume Leaked       | Low, medium                                                          |
-| Remediation Complexity   | High                                                                 |
+| Technical Complexity     | High                                                                 |
+| Data Volume Leaked       | Low                                                                  |
+| Stealth                  | Medium                                                               |
+| Mitigation Complexity    | High                                                                 |
 
 ![MitreAtt&ckTechnique](/img/t1537.png)
 
@@ -97,7 +98,7 @@ Can' be detected at the Cloud control plane level. It only involve data plane.
 
 Detection on data plane is possible if you control all network flows going to the internet using an Internet proxy. TLS inspection of network flows must be configured.
 
-Several detection pattern could be deployed, base on the Internet proxy logs :
+Several detection patterns could be deployed, based on the Internet proxy logs :
 - huge amount on request with abnormal request size.
 - strange format on http headers, here the User-Agent header. look for base64, high entropy data, ...
 

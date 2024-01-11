@@ -11,9 +11,9 @@
   - [Scenario Analysis](#scenario-analysis)
     - [Technical Complexity](#technical-complexity)
     - [Data Volume Leaked](#data-volume-leaked)
-  - [Detection](#detection)
-    - [Vulnerability Detection](#vulnerability-detection)
-    - [Leakage Detection](#leakage-detection)
+    - [Detection/Stealth](#detectionstealth)
+      - [Vulnerability Detection](#vulnerability-detection)
+      - [Leakage Detection](#leakage-detection)
   - [Mitigations](#mitigations)
   - [Exploitation Tooling](#exploitation-tooling)
 
@@ -26,6 +26,7 @@
 | Impact type              | Data Leakage                                                        |
 | Technical Complexity     | Low                                                                 |
 | Data Volume Leaked       | High                                                                |
+| Stealth                  | Medium                                                              |
 | Remediation Complexity   | High                                                                |
 
 ![MitreAtt&ckTechnique](/img/t1537.png)
@@ -41,7 +42,7 @@
 
 ![CloudConcerns Leakage AMI Sharing Diagram](cloudconcerns-leakage-ami.svg)
 
-Refer to the [Risk](/risk-scale.md) scale page, for risk evaluation explanation.
+Refer to the [Risk scale](/risk-scale.md)  page, for risk evaluation explanation.
 
 ### Scenario Script
 
@@ -64,14 +65,14 @@ This scenario is relatively simple to execute, provided all prerequisites (i.e.,
 
 This technique is suited for a very high volume of data leakage. With one AMI, up to 64 TB can be exfiltrated ([AMI size limits](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ComponentsAMIs.html#storage-for-the-root-device)).
 
-## Detection
-### Vulnerability Detection
+### Detection/Stealth 
+#### Vulnerability Detection
 
 - Evaluate IAM permissions to detect if sensitive users can modify AMI permissions.
 - Ensure that "Block public access for AMIs" is configured in the EC2 "Data protection and security" options.
 - Modifications to AMI permissions will generate log records in CloudTrail. You should monitor such events.
 
-### Leakage Detection
+#### Leakage Detection
 
 If an AMI is shared with another account, the only trace is the sharing configuration. We **cannot know** if an adversary **has effectively accessed or downloaded the AMI**. No log is generated in CloudTrail or any other logging system.
 

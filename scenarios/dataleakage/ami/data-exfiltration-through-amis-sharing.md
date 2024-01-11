@@ -1,15 +1,21 @@
 # CloudConcerns: Data Leakage through AMI Sharing
 
 ## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Modus Operandi](#modus-operandi)
-  - [Scenario Diagram](#scenario-diagram)
-  - [Scenario Script](#scenario-script)
-- [Scenario Analysis](#scenario-analysis)
-  - [Technical Complexity](#technical-complexity)
-  - [Data Volume Leaked](#data-volume-leaked)
-- [Mitigations](#mitigations)
-- [Exploitation Tooling](#exploitation-tooling)
+- [CloudConcerns: Data Leakage through AMI Sharing](#cloudconcerns-data-leakage-through-ami-sharing)
+  - [Table of Contents](#table-of-contents)
+  - [Table](#table)
+  - [Prerequisites](#prerequisites)
+  - [Modus Operandi](#modus-operandi)
+    - [Scenario Diagram](#scenario-diagram)
+    - [Scenario Script](#scenario-script)
+  - [Scenario Analysis](#scenario-analysis)
+    - [Technical Complexity](#technical-complexity)
+    - [Data Volume Leaked](#data-volume-leaked)
+  - [Detection](#detection)
+    - [Vulnerability Detection](#vulnerability-detection)
+    - [Leakage Detection](#leakage-detection)
+  - [Mitigations](#mitigations)
+  - [Exploitation Tooling](#exploitation-tooling)
 
 ## Table
 
@@ -33,7 +39,9 @@
 
 ### Scenario Diagram
 
-![CloudConcerns Leakage AMI Sharing Diagram](cloudconcerns-leakage-ami.png)
+![CloudConcerns Leakage AMI Sharing Diagram](cloudconcerns-leakage-ami.svg)
+
+Refer to the [Risk](/risk-scale.md) scale page, for risk evaluation explanation.
 
 ### Scenario Script
 

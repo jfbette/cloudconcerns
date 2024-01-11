@@ -12,6 +12,9 @@
   - [Scenario Analysis](#scenario-analysis)
     - [Technical Complexity](#technical-complexity)
     - [Data Volume Leaked](#data-volume-leaked)
+    - [Detection/Stealth](#detectionstealth)
+      - [Vulnerability Detection](#vulnerability-detection)
+      - [Leakage Detection](#leakage-detection)
   - [Mitigations](#mitigations)
     - [Internet Access Filtering](#internet-access-filtering)
   - [Exploitation Tooling](#exploitation-tooling)
@@ -39,6 +42,7 @@
 ### Scenario Diagram
 
 ![CloudConcerns leakage CloudTrail diagram](cloudconcerns-leakage-cloudtrail.svg)
+Refer to the [Risk scale](/risk-scale.md)  page, for risk evaluation explanation.
 
 ### Scenario Script
 
@@ -83,6 +87,19 @@ Aside from size, AWS API requests are subject to rate limitations depending on t
 These constraints limit the throughput of data leakage significantly.
 
 This technique is suited for limited leakage of high-value data.
+
+### Detection/Stealth 
+#### Vulnerability Detection
+
+Can' be detected at the Cloud control plane level. It only involve data plane.
+
+#### Leakage Detection
+
+Detection on data plane is possible if you control all network flows going to the internet using an Internet proxy. TLS inspection of network flows must be configured.
+
+Several detection pattern could be deployed, base on the Internet proxy logs :
+- huge amount on request with abnormal request size.
+- strange format on http headers, here the User-Agent header. look for base64, high entropy data, ...
 
 ## Mitigations
 

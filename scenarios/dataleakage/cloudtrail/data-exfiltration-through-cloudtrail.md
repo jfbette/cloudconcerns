@@ -1,18 +1,20 @@
 # CloudConcerns: Data Leakage through CloudTrail on Service Request
 
 ## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Modus Operandi](#modus-operandi)
-  - [Scenario Diagram](#scenario-diagram)
-  - [Scenario Script](#scenario-script)
-  - [Discussion on AWS Identities](#a-discussion-on-aws-identities)
-- [Scenario Analysis](#scenario-analysis)
-  - [Technical Complexity](#technical-complexity)
-  - [Data Volume Leaked](#data-volume-leaked)
-- [Mitigations](#mitigations)
-  - [VPC Endpoint Deployment](#vpc-endpoint-deployment)
-  - [Internet Access Filtering](#internet-access-filtering)
-- [Exploitation Tooling](#exploitation-tooling)
+- [CloudConcerns: Data Leakage through CloudTrail on Service Request](#cloudconcerns-data-leakage-through-cloudtrail-on-service-request)
+  - [Table of Contents](#table-of-contents)
+  - [Table](#table)
+  - [Prerequisites](#prerequisites)
+  - [Modus Operandi](#modus-operandi)
+    - [Scenario Diagram](#scenario-diagram)
+    - [Scenario Script](#scenario-script)
+    - [A Discussion on AWS Identities](#a-discussion-on-aws-identities)
+  - [Scenario Analysis](#scenario-analysis)
+    - [Technical Complexity](#technical-complexity)
+    - [Data Volume Leaked](#data-volume-leaked)
+  - [Mitigations](#mitigations)
+    - [Internet Access Filtering](#internet-access-filtering)
+  - [Exploitation Tooling](#exploitation-tooling)
 
 ## Table
 
@@ -36,7 +38,7 @@
 
 ### Scenario Diagram
 
-![CloudConcerns leakage CloudTrail diagram](cloudconcerns-leakage-cloudtrail.png)
+![CloudConcerns leakage CloudTrail diagram](cloudconcerns-leakage-cloudtrail.svg)
 
 ### Scenario Script
 
